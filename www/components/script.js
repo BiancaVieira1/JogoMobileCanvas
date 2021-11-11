@@ -3,6 +3,7 @@
 window.onload = function(){
  inicioJogo();
 
+
  document.querySelector("#direita").addEventListener("click", function(){
  direita();
  setTimeout(parar, 800);
@@ -48,9 +49,9 @@ window.onload = function(){
 /////temas
    function temas (){
     let claro = {
-      canvas: "#ECECEC",
+      canvas: "#00FA9A",
       body: "#fff",
-      botao: "#9B9999"
+      botao: "##191970"
     }
 
     localStorage.setItem("claro", JSON.stringify(claro));
@@ -73,8 +74,8 @@ var pontos;
 ///Inicio do Jogo 
 function inicioJogo(){
 areaJogo.start();
-personagemObj = new componente('#8C3BE0', 10, 120, 30, 30); 
-pontos =  new componente('#8C3BE0', 10, 30, 'Consolas','30px', 'texto'); 
+personagemObj = new componente('#BC8F8F', 10, 120, 30, 30); 
+pontos =  new componente('#BC8F8F', 10, 30, 'Consolas','30px', 'texto'); 
 }
 
 ///Area do Jogo
@@ -171,8 +172,8 @@ function atualizaAreaJogo(){
    minVazio = 50;
    maxVazio = 200;
    vazio = Math.floor(Math.random()*(maxVazio-minVazio+1)+minVazio);
-   obstaculo.push(new componente('#1B9913',x,0,altura,10));
-   obstaculo.push(new componente('#1B9913',x,altura + vazio, x - altura - vazio,10));
+   obstaculo.push(new componente('#A020F0',x,0,altura,10));
+   obstaculo.push(new componente('#00FA9A',x,altura + vazio, x - altura - vazio,10));
  }
   for (i = 0; i < obstaculo.length; i++){
     obstaculo[i].x += -1;
